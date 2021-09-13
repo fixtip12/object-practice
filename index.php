@@ -4,7 +4,7 @@ class Monster{
     private $name;
     private $hp;
     private $army;
-    public $magic;
+    private $magic;
 
     function __construct($name)
     {
@@ -21,10 +21,31 @@ class Monster{
         return $this->army;
     }
 
+    function getMagic()
+    {
+        return $this->name . 'の魔法力は' . $this->magic . 'です。' . '<br>';
+    }
+
+    function getMagic2()
+    {
+        return $this->name . 'は' . $this->magic2 . '<br>';
+    }
+
     function setHp($hp)
     {
         $this->hp = $hp;
     }
+
+    function setMagic($magic)
+    {
+        $this->magic = $magic;
+    }
+
+    function setMagic2($magic)
+    {
+        $this->magic2 = $magic;
+    }
+
 }
 
 $slim = new Monster('スライム');
@@ -33,6 +54,15 @@ echo $slim->getHp();
 $boss = new Monster('ボス');
 $boss->setHp(20);
 echo $boss->getHp();
+
+$magic->setMagic(30);
+var_dump($magic);
+exit ;
+echo $magic->getMagic();
+$magic->setMagic2(魔法が使えません);
+echo $magic->getMagic2();
+
+
 
 // それぞれのモンスターの魔法（$magic）を出力してほしい
 // スライムは魔法を持たず、出力結果は「スライムは魔法が使えません。」と出力する。
