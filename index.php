@@ -56,8 +56,6 @@ $boss->setHp(20);
 echo $boss->getHp();
 
 $magic->setMagic(30);
-var_dump($magic);
-exit ;
 echo $magic->getMagic();
 $magic->setMagic2(魔法が使えません);
 echo $magic->getMagic2();
