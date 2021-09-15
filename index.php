@@ -23,12 +23,10 @@ class Monster{
 
     function getMagic()
     {
+        if($this->magic == 0){
+            return  $this->name . 'は魔法が使えません。' . '<br>';
+        }
         return $this->name . 'の魔法力は' . $this->magic . 'です。' . '<br>';
-    }
-
-    function getMagic2()
-    {
-        return $this->name . 'は' . $this->magic2 . '<br>';
     }
 
     function setHp($hp)
@@ -41,11 +39,6 @@ class Monster{
         $this->magic = $magic;
     }
 
-    function setMagic2($magic)
-    {
-        $this->magic2 = $magic;
-    }
-
 }
 
 $slim = new Monster('スライム');
@@ -55,10 +48,15 @@ $boss = new Monster('ボス');
 $boss->setHp(20);
 echo $boss->getHp();
 
-$magic->setMagic(30);
-echo $magic->getMagic();
-$magic->setMagic2(魔法が使えません);
-echo $magic->getMagic2();
+
+$boss->setMagic(30);
+echo $boss->getMagic();
+$slim->setMagic(0);
+echo $slim->getMagic();
+
+$monsterA = new Monster('monsterA');
+$monsterA->setMagic(0);
+echo $monsterA->getMagic();
 
 
 
@@ -66,3 +64,9 @@ echo $magic->getMagic2();
 // スライムは魔法を持たず、出力結果は「スライムは魔法が使えません。」と出力する。
 // ボスは魔法力を３０として、出力結果は「ボスの魔法力は30です。」と出力する。
 // ブランチ名は「feature/add_magic」とする。
+
+// 課題2
+// 新しいモンスター「まるみょん」が発生しました。
+// まるみょんの体力は50、魔法力は100あります。
+// まるみょんのオブジェクトを作成したときに、「あのモンスターまるみょんが登場しました！」と出力する。
+// また「まるみょんの体力は50です。」、「まるみょんの魔法力は100です。」も出力する。
