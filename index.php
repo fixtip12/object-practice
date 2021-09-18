@@ -58,8 +58,15 @@ $monsterA = new Monster('monsterA');
 $monsterA->setMagic(0);
 echo $monsterA->getMagic();
 
+$marumyon = new Monster('まるみょん');
+echo 'あのモンスターまるみょんが登場しました！' . '<br>';
+$marumyon->setHp(50);
+echo $marumyon->getHp();
+$marumyon->setMagic(100);
+echo $marumyon->getMagic();
 
 
+// 課題1
 // それぞれのモンスターの魔法（$magic）を出力してほしい
 // スライムは魔法を持たず、出力結果は「スライムは魔法が使えません。」と出力する。
 // ボスは魔法力を３０として、出力結果は「ボスの魔法力は30です。」と出力する。
