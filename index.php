@@ -39,6 +39,15 @@ class Monster{
         $this->magic = $magic;
     }
 
+    function specialAttack()
+    {
+        if($this->isSpecialMonster){
+            return $this->name . 'のスペシャルアタックバーナーが発動した!!' . '<br>';
+        }
+
+        return $this->name . 'はスペシャルアタックバーナーを発動できません。' . '<br>';
+    }
+
 }
 
 $slim = new Monster('スライム');
@@ -64,6 +73,23 @@ $marumyon->setHp(50);
 echo $marumyon->getHp();
 $marumyon->setMagic(100);
 echo $marumyon->getMagic();
+echo $marumyon->specialAttack();
+
+$monsterB = new Monster('monsterB', true);
+$monsterB->setHp(500);
+echo $monsterB->getHp();
+$monsterB->setMagic(500);
+echo $monsterB->getMagic();
+echo $monsterB->specialAttack();
+
+
+
+echo $marumyon->specialAttack();
+echo $monsterB->specialAttack();
+echo $slim->specialAttack();
+echo $monsterA->specialAttack();
+
+
 
 
 // 課題1
@@ -77,3 +103,4 @@ echo $marumyon->getMagic();
 // まるみょんの体力は50、魔法力は100あります。
 // まるみょんのオブジェクトを作成したときに、「あのモンスターまるみょんが登場しました！」と出力する。
 // また「まるみょんの体力は50です。」、「まるみょんの魔法力は100です。」も出力する。
+?>
