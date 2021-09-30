@@ -15,10 +15,7 @@
 //上記をオブジェクト指向へ変換する
 
 require_once('./Dyce.php');
-// さいころをふる
-// さいころのめをしゅとくする
-// さいころのめによって表示を変える
-$dyce = new Dyce();
+
+$dyce = new Dyce(rand(1,6));
 $dyce->start();
-echo $dyce->getDyce();
 ?>
