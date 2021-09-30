@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php
 //classの内容を書く
 class Dyce{
@@ -21,3 +22,25 @@ class Dyce{
 　}
 }
 ?>
+=======
+<?php
+
+class Dyce
+{
+    public function start()
+    {
+        $dyce = rand(1,6);
+        switch ($dyce) {
+        case ($dyce === 1 || $dyce === 2):
+        echo $dyce . 'は凶です。';
+        break;
+        case ($dyce === 3 || $dyce === 4 || $dyce === 5):
+        echo $dyce . 'は中吉です。';
+        break;
+        default:
+        echo $dyce . 'は大吉です。';
+        break;
+        }
+    }
+}
+>>>>>>> Stashed changes

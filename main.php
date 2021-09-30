@@ -21,5 +21,4 @@ require_once('./Dyce.php');
 $dyce = new Dyce();
 $dyce->start();
 echo $dyce->getDyce();
-
 ?>
