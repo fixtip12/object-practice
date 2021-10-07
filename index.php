@@ -1,11 +1,11 @@
 <?php
 
 class Monster{
-    private $name;
-    private $hp;
-    private $army;
-    private $magic;
-    private $isSpecialMonster;
+    protected $name;
+    protected $hp;
+    protected $army;
+    protected $magic;
+    protected $isSpecialMonster;
 
     function __construct($name,$isSpecialMonster = false)
     {
@@ -51,45 +51,45 @@ class Monster{
             return $this->name . 'のスペシャルアタックバーナーが発動した!!' . '<br>';
         }
 
-        return $this->name . 'はスペシャルアタックバーナーを発動できません。';
+        return $this->name . 'はスペシャルアタックバーナーを発動できません。' . '<br>';
     }
 
 }
 
-$slim = new Monster('スライム');
-$slim->setHp(2);
-echo $slim->getHp();
-$boss = new Monster('ボス');
-$boss->setHp(20);
-echo $boss->getHp();
+// $slim = new Monster('スライム');
+// $slim->setHp(2);
+// echo $slim->getHp();
+// $boss = new Monster('ボス');
+// $boss->setHp(20);
+// echo $boss->getHp();
 
 
-$boss->setMagic(30);
-echo $boss->getMagic();
-$slim->setMagic(0);
-echo $slim->getMagic();
+// $boss->setMagic(30);
+// echo $boss->getMagic();
+// $slim->setMagic(0);
+// echo $slim->getMagic();
 
-$monsterA = new Monster('monsterA');
-$monsterA->setMagic(0);
-echo $monsterA->getMagic();
+// $monsterA = new Monster('monsterA');
+// $monsterA->setMagic(0);
+// echo $monsterA->getMagic();
 
-$marumyon = new Monster('まるみょん',true);
-$marumyon->setHp(50);
-echo $marumyon->getHp();
-$marumyon->setMagic(100);
-echo $marumyon->getMagic();
+// $marumyon = new Monster('まるみょん',true);
+// $marumyon->setHp(50);
+// echo $marumyon->getHp();
+// $marumyon->setMagic(100);
+// echo $marumyon->getMagic();
 
-$monsterB = new Monster('monsterB', true);
-$monsterB->setHp(500);
-echo $monsterB->getHp();
-$monsterB->setMagic(500);
-echo $monsterB->getMagic();
+// $monsterB = new Monster('monsterB', true);
+// $monsterB->setHp(500);
+// echo $monsterB->getHp();
+// $monsterB->setMagic(500);
+// echo $monsterB->getMagic();
 
 
-echo $marumyon->specialAttack();
-echo $monsterB->specialAttack();
-echo $slim->specialAttack();
-echo $monsterA->specialAttack();
+// echo $marumyon->specialAttack();
+// echo $monsterB->specialAttack();
+// echo $slim->specialAttack();
+// echo $monsterA->specialAttack();
 
 
 
